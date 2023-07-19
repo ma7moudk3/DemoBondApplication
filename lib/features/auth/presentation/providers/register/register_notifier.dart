@@ -18,10 +18,7 @@ class RegisterNotifier extends Notifier<RegisterState> {
 
   // Implement your register logic here
   void register() async {
-
     state = state.updateLoading(true);
-
-
 
     // Perform register request...
 

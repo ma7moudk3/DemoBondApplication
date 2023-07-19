@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:bond/features/auth/auth.dart';
-import 'package:bond/features/auth/data/api.dart';
 import 'package:bond_core/bond_core.dart';
 import 'package:bond_notifications/bond_notifications.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
@@ -45,19 +44,19 @@ class RunAppTasks extends RunTasks {
     }
     sl<PushNotificationsProviders>().listen();
     if (Auth.check()) {
-      sl<NotificationCenterProvider>().load();
+    //  sl<NotificationCenterProvider>().load();
       sl<NotificationCenterProvider>().listen();
 
       final firebaseMessaging =
           sl<PushNotificationProvider>(instanceName: 'firebase_messaging');
       final fcmToken = await firebaseMessaging.token;
       if (fcmToken != null) {
-        Map<String, String?> body = {
-          'device_id': await deviceIdInfo(),
-          'device_type': getDeviceType(),
-          'token': fcmToken,
-        }..removeWhere((key, value) => value == null);
-        await sl<AuthApi>().updateToken(body);
+        // Map<String, String?> body = {
+        //   'device_id': await deviceIdInfo(),
+        //   'device_type': getDeviceType(),
+        //   'token': fcmToken,
+        // }..removeWhere((key, value) => value == null);
+        // await sl<AuthApi>().updateToken(body);
       }
     }
   }

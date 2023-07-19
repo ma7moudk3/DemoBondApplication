@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '766000556009',
     projectId: 'flutter-bond-87485',
     storageBucket: 'flutter-bond-87485.appspot.com',
-    iosClientId: '766000556009-0u0bfplre3qmoe13fq7imp8e6528e4af.apps.googleusercontent.com',
+    iosClientId:
+        '766000556009-0u0bfplre3qmoe13fq7imp8e6528e4af.apps.googleusercontent.com',
     iosBundleId: 'ps.app.bond',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '766000556009',
     projectId: 'flutter-bond-87485',
     storageBucket: 'flutter-bond-87485.appspot.com',
-    iosClientId: '766000556009-dnbn58gnjeo4a581uvm95nqe973kupul.apps.googleusercontent.com',
+    iosClientId:
+        '766000556009-dnbn58gnjeo4a581uvm95nqe973kupul.apps.googleusercontent.com',
     iosBundleId: 'ps.app.flutterBond',
   );
 }

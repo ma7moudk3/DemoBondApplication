@@ -19,13 +19,12 @@ class _$AppRouter extends RootStackRouter {
   }) : super(navigatorKey);
 
   final AuthGuard authGuard;
-
   @override
   final Map<String, PageFactory> pagesMap = {
-    MainRoute.name: (routeData) {
+    HomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const MainPage(),
+        child: const HomePage(),
       );
     },
     LoginRoute.name: (routeData) {
@@ -63,57 +62,13 @@ class _$AppRouter extends RootStackRouter {
         barrierDismissible: false,
       );
     },
-    PostDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<PostDetailsRouteArgs>();
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: PostDetailsPage(
-          post: args.post,
-          key: args.key,
-        ),
-      );
-    },
-    NotificationsRoute.name: (routeData) {
-      final args = routeData.argsAs<NotificationsRouteArgs>();
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: NotificationsPage(
-          notificationCenterProvider: args.notificationCenterProvider,
-          key: args.key,
-        ),
-      );
-    },
-    HomeRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: WrappedRoute(child: const HomePage()),
-      );
-    },
-    MoreRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const MorePage(),
-      );
-    },
   };
 
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
-          MainRoute.name,
+          HomeRoute.name,
           path: '/',
-          children: [
-            RouteConfig(
-              HomeRoute.name,
-              path: 'home-page',
-              parent: MainRoute.name,
-            ),
-            RouteConfig(
-              MoreRoute.name,
-              path: 'more-page',
-              parent: MainRoute.name,
-            ),
-          ],
         ),
         RouteConfig(
           LoginRoute.name,
@@ -131,29 +86,19 @@ class _$AppRouter extends RootStackRouter {
           SoftUpdateRoute.name,
           path: '/soft-update-page',
         ),
-        RouteConfig(
-          PostDetailsRoute.name,
-          path: '/post-details-page',
-        ),
-        RouteConfig(
-          NotificationsRoute.name,
-          path: '/notifications-page',
-          guards: [authGuard],
-        ),
       ];
 }
 
 /// generated route for
-/// [MainPage]
-class MainRoute extends PageRouteInfo<void> {
-  const MainRoute({List<PageRouteInfo>? children})
+/// [HomePage]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute()
       : super(
-          MainRoute.name,
+          HomeRoute.name,
           path: '/',
-          initialChildren: children,
         );
 
-  static const String name = 'MainRoute';
+  static const String name = 'HomeRoute';
 }
 
 /// generated route for
@@ -246,96 +191,4 @@ class SoftUpdateRouteArgs {
   String toString() {
     return 'SoftUpdateRouteArgs{key: $key, message: $message}';
   }
-}
-
-/// generated route for
-/// [PostDetailsPage]
-class PostDetailsRoute extends PageRouteInfo<PostDetailsRouteArgs> {
-  PostDetailsRoute({
-    required Post post,
-    Key? key,
-  }) : super(
-          PostDetailsRoute.name,
-          path: '/post-details-page',
-          args: PostDetailsRouteArgs(
-            post: post,
-            key: key,
-          ),
-        );
-
-  static const String name = 'PostDetailsRoute';
-}
-
-class PostDetailsRouteArgs {
-  const PostDetailsRouteArgs({
-    required this.post,
-    this.key,
-  });
-
-  final Post post;
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'PostDetailsRouteArgs{post: $post, key: $key}';
-  }
-}
-
-/// generated route for
-/// [NotificationsPage]
-class NotificationsRoute extends PageRouteInfo<NotificationsRouteArgs> {
-  NotificationsRoute({
-    required NotificationCenterProvider notificationCenterProvider,
-    Key? key,
-  }) : super(
-          NotificationsRoute.name,
-          path: '/notifications-page',
-          args: NotificationsRouteArgs(
-            notificationCenterProvider: notificationCenterProvider,
-            key: key,
-          ),
-        );
-
-  static const String name = 'NotificationsRoute';
-}
-
-class NotificationsRouteArgs {
-  const NotificationsRouteArgs({
-    required this.notificationCenterProvider,
-    this.key,
-  });
-
-  final NotificationCenterProvider notificationCenterProvider;
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'NotificationsRouteArgs{notificationCenterProvider: $notificationCenterProvider, key: $key}';
-  }
-}
-
-/// generated route for
-/// [HomePage]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute()
-      : super(
-          HomeRoute.name,
-          path: 'home-page',
-        );
-
-  static const String name = 'HomeRoute';
-}
-
-/// generated route for
-/// [MorePage]
-class MoreRoute extends PageRouteInfo<void> {
-  const MoreRoute()
-      : super(
-          MoreRoute.name,
-          path: 'more-page',
-        );
-
-  static const String name = 'MoreRoute';
 }

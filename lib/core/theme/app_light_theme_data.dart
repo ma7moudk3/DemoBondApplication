@@ -5,7 +5,6 @@ ThemeData appLightThemeData() {
   return ThemeData(
     colorScheme: const ColorScheme(
       primaryContainer: Color.fromRGBO(50, 45, 120, 1),
-
       primary: Color.fromRGBO(50, 45, 120, 1),
       secondary: Color.fromRGBO(34, 193, 224, 1),
       surface: Colors.black,

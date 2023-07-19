@@ -6,6 +6,5 @@ class AnalyticsConfig {
       'driver': 'firebase_analytics_provider',
       'class': FirebaseAnalyticsProvider,
     },
-
   };
 }

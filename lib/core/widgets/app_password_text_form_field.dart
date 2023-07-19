@@ -25,9 +25,8 @@ class AppPasswordTextFormField extends HookWidget {
         hintText: hintText,
         prefixIcon: const Icon(Icons.lock),
         suffixIcon: IconButton(
-          icon: Icon(obscured.value
-              ? Icons.lock_outline
-              : Icons.lock_open_outlined),
+          icon: Icon(
+              obscured.value ? Icons.lock_outline : Icons.lock_open_outlined),
           onPressed: () => obscured.value = !obscured.value,
         ),
         errorText: errorText,

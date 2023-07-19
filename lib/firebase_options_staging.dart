@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1060161913171',
     projectId: 'flutter-bond-staging',
     storageBucket: 'flutter-bond-staging.appspot.com',
-    iosClientId: '1060161913171-8alevp0lf0e1cnen8srld97p26lculii.apps.googleusercontent.com',
+    iosClientId:
+        '1060161913171-8alevp0lf0e1cnen8srld97p26lculii.apps.googleusercontent.com',
     iosBundleId: 'ps.app.bond.staging',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1060161913171',
     projectId: 'flutter-bond-staging',
     storageBucket: 'flutter-bond-staging.appspot.com',
-    iosClientId: '1060161913171-b8g79b4ltsolf47n4jvu6vun2cq0cetf.apps.googleusercontent.com',
+    iosClientId:
+        '1060161913171-b8g79b4ltsolf47n4jvu6vun2cq0cetf.apps.googleusercontent.com',
     iosBundleId: 'ps.app.flutterBond',
   );
 }

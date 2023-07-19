@@ -76,6 +76,7 @@ dependencies:
 
   # localization
   intl: ^0.18.0
+  flutter_html: ^3.0.0-beta.2
 
 dev_dependencies:
   flutter_test:

@@ -11,11 +11,11 @@ class ApiServiceProvider extends ServiceProvider {
   @override
   Future<void> register(GetIt it) async {
     final baseOptions = BaseOptions(
-      connectTimeout: Duration(seconds: config('CONNECT_TIMEOUT')),
-      sendTimeout: Duration(seconds: config('SEND_TIMEOUT')),
-      receiveTimeout: Duration(seconds: config('RECEIVE_TIMEOUT')),
+      connectTimeout: const Duration(seconds: 10),
+      sendTimeout: const Duration(seconds: 10),
+      receiveTimeout: const Duration(seconds:10),
       receiveDataWhenStatusError: config('RECEIVE_DATA_WHEN_STATUS_ERROR'),
-      baseUrl: config('API_BASE_URL'),
+      baseUrl: "https://phpstack-628142-3311232.cloudwaysapps.com/api/v1/",
     );
     Api.extraHeaders = () {
       final token = Auth.token();

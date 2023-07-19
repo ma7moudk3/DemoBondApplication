@@ -38,5 +38,6 @@ class FirebaseMessagingNotificationProvider extends PushNotificationProvider {
   Future<void> deleteToken() => _firebaseMessaging.deleteToken();
 
   @override
-  Stream<NotificationData> get onNotificationDismiss => throw UnimplementedError();
+  Stream<NotificationData> get onNotificationDismiss =>
+      throw UnimplementedError();
 }

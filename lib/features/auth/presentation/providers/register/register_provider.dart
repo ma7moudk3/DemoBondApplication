@@ -5,6 +5,7 @@ part 'register_notifier.dart';
 
 part 'register_state.dart';
 
-final registerNotifierProvider = NotifierProvider<RegisterNotifier, RegisterState>(
+final registerNotifierProvider =
+    NotifierProvider<RegisterNotifier, RegisterState>(
   () => RegisterNotifier(),
 );

@@ -40,8 +40,7 @@ class UpdateAppService {
   }
 
   void showSoftUpdate() {
-    final jsonString =
-        remoteConfig.getString('appCurrentVersion');
+    final jsonString = remoteConfig.getString('appCurrentVersion');
     final remoteConfigVersion =
         CurrentVersion.fromJson(json.decode(jsonString));
     final currentVersion = int.tryParse(packageInfo.buildNumber) ?? 0;

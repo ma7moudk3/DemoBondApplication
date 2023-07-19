@@ -15,8 +15,8 @@ class SecureStorageCacheDriver implements CacheDriver {
     try {
       await _flutterSecureStorage.deleteAll();
       return true;
-    } catch (error , stack) {
-      log('flush error: $error , stackTrace : $stack' );
+    } catch (error, stack) {
+      log('flush error: $error , stackTrace : $stack');
       return false;
     }
   }
@@ -26,8 +26,8 @@ class SecureStorageCacheDriver implements CacheDriver {
     try {
       await _flutterSecureStorage.delete(key: key);
       return true;
-    } catch (error , stack) {
-      log('forget error: $error , stackTrace : $stack' );
+    } catch (error, stack) {
+      log('forget error: $error , stackTrace : $stack');
       return false;
     }
   }
@@ -64,8 +64,8 @@ class SecureStorageCacheDriver implements CacheDriver {
     try {
       await _flutterSecureStorage.write(key: key, value: stringCache);
       return true;
-    } catch (error , stack) {
-      log('put error: $error , stackTrace : $stack' );
+    } catch (error, stack) {
+      log('put error: $error , stackTrace : $stack');
       return false;
     }
   }

@@ -1,4 +1,4 @@
-part of 'post_cubit.dart';
+part of 'home_cubit.dart';
 
 enum ListStatus { initial, loading, success, failed }
 

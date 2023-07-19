@@ -107,6 +107,8 @@ ThemeData appDarkThemeData() {
           color: Color.fromRGBO(50, 45, 120, 1),
         ),
       ),
-    ), bottomAppBarTheme: const BottomAppBarTheme(color: Color.fromRGBO(9, 35, 55, 1)),
+    ),
+    bottomAppBarTheme:
+        const BottomAppBarTheme(color: Color.fromRGBO(9, 35, 55, 1)),
   );
 }
